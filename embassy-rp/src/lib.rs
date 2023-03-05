@@ -126,7 +126,7 @@ embassy_hal_common::peripherals! {
 
 #[link_section = ".boot2"]
 #[used]
-static BOOT2: [u8; 256] = *include_bytes!("boot2.bin");
+static BOOT2: [u8; 256] = rp2040_boot2::BOOT_LOADER_RAM_MEMCPY;
 
 pub mod config {
     #[non_exhaustive]
